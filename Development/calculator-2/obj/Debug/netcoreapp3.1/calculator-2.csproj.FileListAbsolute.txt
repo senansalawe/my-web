@@ -1,0 +1,15 @@
+C:\xampp\htdocs\xampp\work\Development\calculator-2\bin\Debug\netcoreapp3.1\calculator-2.exe
+C:\xampp\htdocs\xampp\work\Development\calculator-2\bin\Debug\netcoreapp3.1\calculator-2.deps.json
+C:\xampp\htdocs\xampp\work\Development\calculator-2\bin\Debug\netcoreapp3.1\calculator-2.runtimeconfig.json
+C:\xampp\htdocs\xampp\work\Development\calculator-2\bin\Debug\netcoreapp3.1\calculator-2.runtimeconfig.dev.json
+C:\xampp\htdocs\xampp\work\Development\calculator-2\bin\Debug\netcoreapp3.1\calculator-2.dll
+C:\xampp\htdocs\xampp\work\Development\calculator-2\bin\Debug\netcoreapp3.1\calculator-2.pdb
+C:\xampp\htdocs\xampp\work\Development\calculator-2\obj\Debug\netcoreapp3.1\calculator_2.Form1.resources
+C:\xampp\htdocs\xampp\work\Development\calculator-2\obj\Debug\netcoreapp3.1\calculator-2.csproj.GenerateResource.cache
+C:\xampp\htdocs\xampp\work\Development\calculator-2\obj\Debug\netcoreapp3.1\calculator-2.AssemblyInfoInputs.cache
+C:\xampp\htdocs\xampp\work\Development\calculator-2\obj\Debug\netcoreapp3.1\calculator-2.AssemblyInfo.cs
+C:\xampp\htdocs\xampp\work\Development\calculator-2\obj\Debug\netcoreapp3.1\calculator-2.csproj.CoreCompileInputs.cache
+C:\xampp\htdocs\xampp\work\Development\calculator-2\obj\Debug\netcoreapp3.1\calculator-2.dll
+C:\xampp\htdocs\xampp\work\Development\calculator-2\obj\Debug\netcoreapp3.1\calculator-2.pdb
+C:\xampp\htdocs\xampp\work\Development\calculator-2\obj\Debug\netcoreapp3.1\calculator-2.genruntimeconfig.cache
+C:\xampp\htdocs\xampp\work\Development\calculator-2\obj\Debug\netcoreapp3.1\calculator-2.csprojAssemblyReference.cache

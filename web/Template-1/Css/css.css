@@ -1,0 +1,260 @@
+/* Global */
+:root {
+  --main-color: #10cab7;
+  --icon-color: #0d4bd8de;
+  --font-color: #2c4755;
+  --section-padding: 10px;
+}
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'work sans', sans-serif;
+}
+html {
+  scroll-behavior: smooth;
+}
+.container {
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+/* Global */
+/* Components for every time */
+.contact {
+  padding: 10px;
+  height: 300px;
+}
+.contact .container {
+  display: block;
+}
+.special-heading {
+  color: #ebeced;
+  font-size: 75px;
+  text-align: center;
+  font-weight: 800;
+  margin: 0;
+}
+.special-heading + p {
+  margin: -5px 0 0;
+  font-size: 20px;
+  text-align: center;
+  color: #777;
+}
+/* Components for every time */
+/* =================================================== */
+/* Media */
+@media (max-width: 767px) {
+  .special-heading {
+    font-size: 50px;
+    color: var(--icon-color);
+  }
+  .special-heading + p {
+    margin-top: 10px;
+  }
+}
+/* ===================== */
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
+}
+/* ===================== */
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+}
+/* ===================== */
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+}
+/* Media */
+/* head */
+.header {
+  padding: 10px;
+  height: 80px;
+}
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.container .logo {
+  width: 75px;
+}
+.container .links {
+  position: relative;
+}
+.container .links:hover .icon span:nth-child(2) {
+  width: 100%; /* make icon*/
+}
+.container .links .icon {
+  width: 30px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+/* ===================================== */
+/* icon How i make icon */
+.links .icon span {
+  background-color: black;
+  margin-bottom: 3px;
+  height: 3px;
+}
+.links .icon span:first-child {
+  width: 100%;
+}
+.links .icon span:nth-child(2) {
+  width: 50%;
+  transition: 0.5s;
+}
+.links .icon span:last-child {
+  width: 100%;
+}
+/* icon How i make icon */
+.links ul {
+  list-style: none;
+  margin: 0;
+  background-color: #f6f6f6;
+  position: absolute;
+  right: 0;
+  min-width: 140px;
+  top: calc(100% + 20px);
+  display: none;
+  padding:0;
+  z-index: 1;
+}
+.header .links ul::before {
+  content: '';
+  border-width: 5px;
+  border-style: solid;
+  border-color: transparent transparent #f6f6f6 transparent;
+  right: 5px;
+  top: -20px;
+  position: absolute;
+}
+.header .links:hover ul {
+  display: block;
+}
+.links ul li a {
+  display: block;
+  padding: 7px;
+  text-decoration: none;
+  color: #333;
+  transition: 0.5s;
+}
+.links ul li a:hover {
+  padding-left: 25px;
+}
+.links ul li:not(:last-child) a {
+  border-bottom: 1px solid #ddd;
+}
+/* ===================================== */
+/* head */
+/* Landing */
+.landing {
+  background-image: url(../Imges/rice-4.jpg);
+  height: 420px;
+  background-size: cover;
+  position: relative;
+}
+.landing .intero {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 450px;
+  max-width: 100%;
+  padding: 10px;
+}
+.intero h1 {
+  margin: 0;
+  font-weight: bold;
+  font-size: 35px;
+  color: var(--main-color);
+  text-align: center;
+}
+.intero p {
+  text-align: center;
+}
+/* Landing */
+/* About-us */
+.about-us {
+  padding-top: 50px;
+  padding-bottom: 50px;
+  background-color: #f6f6f6;
+}
+.about-us .container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-gap: 20px;
+}
+.about-us .container .feat {
+  text-align: center;
+  padding: 20px;
+}
+.about-us .container .feat i {
+  color: var(--icon-color);
+}
+.about-us .container .feat h3 {
+  font-weight: 800;
+  margin: 15px 0;
+}
+.about-us .container .feat p {
+  line-height: 1.4;
+  color: #777;
+}
+/* About-us */
+/* Contact */
+.contact {
+  padding-left: var(--section-padding);
+  padding-bottom: var(--section-padding);
+  background-color: palegoldenrod;
+}
+.contact .info {
+  padding-left: var(--section-padding);
+  padding-bottom: var(--section-padding);
+  text-align: center;
+}
+.info .lable {
+  font-size: 20px;
+  font-weight: 800;
+  color: var(--font-color);
+}
+.info .link {
+  display: block;
+  font-size: 20px;
+  font-weight: 800;
+  color: var(--icon-color);
+  text-decoration: none;
+}
+.info .social {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  font-size: 20px;
+}
+.social i {
+  margin-left: 10px;
+  color: var(--font-color);
+}
+/* Contact */
+/* Footer */
+.footer {
+  background-color: var(--icon-color);;
+  color: white;
+  padding: 30px 10px;
+  text-align: center;
+  font-size: 18px;
+}
+.footer span {
+  font-weight: bold;
+  color: var(--font-color);
+}
+/* Footer */

@@ -1,0 +1,224 @@
+html
+==================================
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../Restaurant/css/bxslider.css"> 
+    <link rel="stylesheet" href="../Restaurant/css/normalize.css">  
+    <link rel="stylesheet" href="../Restaurant/css/style.css">
+    <title>Restaurant</title>
+</head>
+<body>
+    <!-- Navbar -->
+    <div class="navbar">
+      <div class="container">
+            <div class="brand">
+                <h2>Classic</h2>
+            </div>
+            <ul class="links">
+                <li class="active"><a href="#">Home</a></li>
+                <li><a href="#" data-value="us">About-Us</a></li>
+                <li><a href="#" data-value="con">Contact</a></li>
+            </ul>
+            <div class="clearfix"></div>
+      </div>
+    </div>
+    <!-- Navbar -->
+    <!-- ================================================= ==-->
+    <!-- Header -->
+    <div class="header">
+      <div class="overlay">
+        <ul class="slider">
+            <li>
+                <h2>Welcome <span>Restaurant</span></h2>
+                <p>This is paragraph One</p>
+            </li>
+            <li>
+                <h2>Welcome <span>Tow</span></h2>
+                <p>This is paragraph Tow</p>
+            </li>
+            <li>
+                <h2>Welcome <span>Three</span></h2>
+                <p>This is paragraph Three</p>
+            </li>
+        </ul>
+      </div>
+    </div>
+    <!-- Header -->
+    <!-- ================================================= -->
+    <!-- Our Food -->
+    <div id="us" class="our-food">
+        <div class="container">
+            <h2 class="my-h2">Our Food</h2>            
+        </div>
+    </div>
+    <!-- must take id same name with data-value in the <a> -->
+    <!-- Our Food -->
+    <!-- ================================================= -->
+    <!-- script -->
+    
+    <script src="../Restaurant/Js/jquery-3.5.1.min.js"></script>
+    <script src="../Restaurant/Js/bxslider.js"></script>
+    <script src="../Restaurant/Js/style.js"></script>
+</body>
+</html>
+=================================================================
+css
+=================================================================
+/* Global */
+body {}
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.container {
+  width: 1200px;
+  margin: auto;
+  
+}
+/* Global */
+/* Nav */
+.navbar {
+  font-size: 20px;
+  height: 0; /*transform navbar*/
+  color: #000;
+  position: relative;
+  z-index: 2;
+}
+.navbar .brand {
+  float: left;
+  width: 40%;
+}
+
+.navbar .links {
+  width: 60%;
+  float: right;
+}
+.links li {
+  display: inline-block;
+  padding: 10px;
+  margin: 0 12px;
+  border-bottom: 2px solid transparent; /*#border under text#*/
+}
+.links li a {text-decoration: none; color: black;}
+.navbar .links li.active a,
+.navbar .links li a:hover {
+  color: #1abc9c;
+  
+}
+.navbar .links li.active,
+.navbar .links li:hover {
+  border-bottom: 2px solid #1abc9c; /*##*/
+}
+/* Nav */
+/* --------------------------------------- */
+/* header */
+.header {
+  background: url(../imgs/3.jpeg);
+  
+  background-size: cover;
+}
+/* header */
+/* --------------------------------------- */
+/* overlay */
+.header .overlay {
+  background-color: rgba(0, 0, 0, 0.4);
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+/* overlay */
+/* --------------------------------------- */
+/* bx-slider */
+.header .bx-wrapper {
+  box-shadow: none;
+  border: 0;
+  background: none;
+  
+}
+.header .bx-wrapper .bx-viewport {
+  box-shadow: none;
+  border: 0;
+  background: none;
+  
+  text-align: center;
+}
+.header .slider {
+ 
+}
+.header .slider li {
+  display: block;
+}
+.bx-wrapper .bx-controls-direction a {top: 58% !important;}
+.header .slider li h2 {font-size: 50px; margin-bottom: 10px;margin-top: 0;}
+.header .slider li h2 span {color: #1abc9c;}
+.header .slider li p {margin-top: 10px;}
+
+/* bx-slider */
+/* --------------------------------------- */
+/* Our-food */
+.our-food{padding: 20px;}
+.our-food h2 {margin: 0;}
+/* Our-food */
+/* --------------------------------------- */
+/* Framework */
+.clearfix {
+  clear: both;
+}
+.our-food .container .my-h2::after{content: "";
+display: block;
+position: relative;
+left: 10px;
+width: 30px;
+border-bottom: 2px solid #333;}
+/* Framework */
+=====================================================================
+Js
+=====================================================================
+// global
+// resize image in the window
+$(function (){
+    'use strict';
+    var myHeader = $('.header');
+    myHeader.height($(window).height());
+    $(window).resize(function () {
+        myHeader.height($(window).height());
+    });
+
+    // resize image in the window
+    // =================================
+    // add active for links (new for me 01)
+    $('.links li').click(function() {
+        $(this).addClass('active').siblings().removeClass('active')
+    });
+    // add active for links (new for me 01)
+    // =================================
+    // bx-slider
+    $('.slider').bxSlider({
+        pager : false
+    });
+    // bx-slider
+    // =================================
+    //slider-center
+    $('.slider').each(function(){
+        $(this).css('paddingTop', ($(window).height() - $('.slider li').height()) / 2);
+    });
+    //slider-center
+    // =================================
+    // smooth scroll
+    $('.links li a').click(function(){
+        $('html, body').animate({
+            scrollTop: $('#' + $(this).data('value')).offset().top
+        }, 1000);
+    });
+    // smooth scroll
+});
+

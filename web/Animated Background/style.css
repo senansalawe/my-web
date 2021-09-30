@@ -1,0 +1,28 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-family: inherit;
+}
+.header{
+    width: 100%;
+    position: absolute;
+    z-index: 1;
+}
+.header ul{
+    height: 50px;
+    text-align: center;
+}
+.header ul li{
+    display: inline-block;
+    padding: 40px 15px;
+    text-transform: uppercase;
+    color: khaki;
+    font-size: 15px;
+    cursor: pointer;
+}
+.logo{
+    font-weight: 900;
+    font-size: 30px !important;
+}

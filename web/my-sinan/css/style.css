@@ -1,0 +1,50 @@
+/* Global */
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+body {
+}
+.container {
+  width: 1200px;
+  margin: auto;
+}
+ul{list-style: none;}
+/* Global */
+/* ================================== */
+/* navbar */
+.navbar {
+  font-size: 22px;
+  height: 0;
+  color: #eee;
+}
+.navbar .brand {
+  float: left;
+  width: 40%;
+}
+.navbar .links {
+  float: left;
+  width: 60%;
+  font-weight: bold;
+  
+} 
+.navbar .links li {    /* control for space li*/
+  display: inline-block;
+  padding: 10px ;  /*1*/
+  margin: 0 12px; /*2*/
+  border-bottom: 2px solid transparent; /* border trans */
+}
+.links li.active,
+.links li:hover {color: #1abc9c;border-bottom: 5px solid #1abc9c;}
+/* navbar */
+/* ================================== */
+/* Header */
+.header {background: url(../imgs/6.jpeg);height: 500px;background-size: cover;}
+/* Header */
+/* ================================== */
+/* Framework */
+.clearfix {
+  clear: both;
+}
+/* Framework */
